@@ -26,7 +26,7 @@ class Organization:
         try:
             emp_tmp.input_full_data()
             self.employee_db.append(emp_tmp)
-            print("Количество сотрудников: ".format(len(self.employee_db)))
+            print("Количество сотрудников: {}".format(len(self.employee_db)))
         except:
             print('\nДанные были введены некорректно, процедура ввода прервана!')
 
@@ -80,7 +80,7 @@ class Organization:
         try:
             dpt_tmp.input_full_data()
             self.department_db.append(dpt_tmp)
-            print("Количество отделов: ".format(len(self.department_db)))
+            print("Количество отделов: {}".format(len(self.department_db)))
         except:
             print('\nДанные были введены некорректно, процедура ввода прервана!')
 
@@ -120,7 +120,7 @@ def main():
            "Введите команду...\n"
     org = Organization()
     while True:
-        script = input('Добро пожаловать в БД организации\n' + menu).split()
+        script = input('\nДобро пожаловать в БД организации\n' + menu).split()
         if len(script) == 3:
             if script[0] == 'search':
                 if script[1] == 'E':
@@ -129,7 +129,7 @@ def main():
                         print(aa[0].get_full_data())
                 elif script[1] == 'D':
                     aa = org.search_department(script[2])
-                    if aa != None and len(aa) > 0:
+                    if aa != None:
                         print(aa.get_full_data())
                 else:
                     print("Ошибка! Я не знаю такой команды!")

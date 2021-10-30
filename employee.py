@@ -27,19 +27,19 @@ class Employee:
         try:
             self._full_name = input('Введите полное имя сотрудника, в формате Фамилия Имя Отчество,'\
                                         ' через пробел и нажмите Enter: ')
-            print("full name {}".format(self._full_name))
+            # print("full name {}".format(self._full_name))
             self._address = input('Введите адрес сотрудника и нажмите Enter: ')
-            print("address {}".format(self._address))
+            # print("address {}".format(self._address))
             self._departments = input('Введите названия отделов где числится сотрудник,'\
                                           ' через пробел и нажмите Enter: ').split()
-            print("departments {}".format(self._departments))
+            # print("departments {}".format(self._departments))
             self._birthday = input('Введите дату рождения сотрудника,'\
                                        ' в формате ДД.ММ.ГГГГ и нажмите Enter: ')
-            print("birthday {}".format(self._birthday))
+            # print("birthday {}".format(self._birthday))
             self._position = input('Введите должность сотрудника и нажмите Enter: ')
-            print("position {}".format(self._position))
+            # print("position {}".format(self._position))
         except:
-            print("EXCEPTION")
+            # print("EXCEPTION")
             raise Exception()
 
     def get_full_data(self):
